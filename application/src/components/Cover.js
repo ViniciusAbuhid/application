@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import me from '../assets/me.jpg'
 import bike from '../assets/bike.jpg'
 import github from '../assets/github.png'
 import insta from '../assets/insta.png'
 import linkedin from '../assets/linkedin.png'
 import wpp from '../assets/wpp.png'
-import jardin from '../assets/jardin.jpg'
 import Header from './Header'
 
 export const Container = styled.div`
@@ -18,14 +16,30 @@ export const Container = styled.div`
     background: linear-gradient(
         rgba(6, 52, 71, 0.45), 
         rgba(6, 52, 71, 0.45)
-      ), url(${bike}) no-repeat scroll left;
+      ), url(${bike}) no-repeat scroll center;
     background-size: cover;
-    box-sizing: border-box;
+
+    @media only screen and (max-width: 767px) {
+        height: auto;
+        background: linear-gradient(
+            rgba(6, 52, 71, 0.45), 
+            rgba(6, 52, 71, 0.45)
+          ), url(${bike}) no-repeat scroll center;
+          background-size: cover;
+    }
+
+    @media only screen and (max-width: 480px) {
+        height: auto;
+        background: linear-gradient(
+            rgba(6, 52, 71, 0.45), 
+            rgba(6, 52, 71, 0.45)
+          ), url(${bike}) no-repeat scroll center;
+        background-size: cover;
+    }
 `
 export const ContentWrapper = styled.div`
     display: flex;
     width: 100%;
-    box-sizing: border-box;
 `
 
 export const SocialMedias = styled.div`
@@ -40,8 +54,7 @@ export const Aboutme = styled.div`
     width:100%;
     display: flex;
     flex-direction: column;
-    padding: 170px 682px 180px 219px;
-    box-sizing: border-box;
+    padding: 170px 550px 180px 219px;
     span {
             font-weight: bold;
             font-stretch: normal;
@@ -50,22 +63,44 @@ export const Aboutme = styled.div`
             letter-spacing: -0.29px;
             color: #ffffff;
             &:first-of-type {
+                white-space: nowrap;
                 font-size: 50px;
                 margin-bottom: 6px;
             }
             &:nth-of-type(2) {
+                font-size: 50px;
+                margin-bottom: 6px;
+                white-space: nowrap;
+                @media only screen and (max-width: 767px) {
+                    white-space: normal;
+                }
+            }
+            &:nth-of-type(3) {
                 font-size: 24px;
                 font-weight: normal;
                 letter-spacing: -0.32px;
                 white-space: nowrap;
                 margin-bottom: 12px;
+                @media only screen and (max-width: 767px) {
+                    white-space: normal;
+                }
             }
-            &:nth-of-type(3) {
+            &:nth-of-type(4) {
                 font-size: 16px;
                 font-weight: normal;
                 letter-spacing: -0.22px;
                 white-space: nowrap;
+                @media only screen and (max-width: 767px) {
+                    white-space: normal;
+                }
             }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 190px 50px 100px 100px;
+    }
+    @media only screen and (max-width: 480px) {
+        padding: 100px 50px 0 50px;
     }
 `
 
@@ -74,10 +109,10 @@ export const TextWrapper = styled.div`
     flex-direction: column;
 `
 
-export default function Cover() {
+export default function Cover(props) {
     return (
             <Container>
-                <Header/>
+                <Header projects={props.projectsInfo} contact={props.contactInfo}/>
                 <ContentWrapper>
                 <SocialMedias>
                 <a href='https://github.com/ViniciusAbuhid' target="_blank">
@@ -89,13 +124,14 @@ export default function Cover() {
                 <a href='https://www.instagram.com/abuhidvinicius/' target="_blank">
                     <img src={insta}/>
                 </a>
-                <a href='https://www.linkedin.com/in/vin%C3%ADcius-abuhid/' target="_blank">
+                <a href="tel:31984662430" target="_blank">
                     <img src={wpp}/>
                 </a>
                 </SocialMedias>
                 <Aboutme>
                     <TextWrapper>
-                        <span>Eu sou <nobr>Vinícius Abuhid</nobr></span>
+                        <span>Eu sou</span>
+                        <span>Vinícius Abuhid</span>
                         <span>Desenvolvedor Web Full-Stack</span>
                         <span>Apaixonado por programação e tecnologia</span>
                     </TextWrapper>

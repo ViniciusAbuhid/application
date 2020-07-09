@@ -5,25 +5,43 @@ import cv from '../assets/cv.pdf'
 
 export const Container = styled.div`
     width: 100%;
-    height: 483px;
+    height: auto;
     background-color: #063447;
     box-sizing: border-box;
-    padding: 69px 221px 64px 283px;
+    padding: 69px 150px 64px 150px;
+    @media only screen and (max-width: 984px){
+        padding: 69px 50px 64px 50px;
+    }
 `
 export const PicContainer = styled.img`
-    width: 305px;
+    width: 250px;
     height: 305px;
     object-fit: cover;
-    box-sizing: border-box;
+    @media only screen and (max-width: 984px){
+        height: auto;
+    }
+    @media only screen and (max-width: 480px){
+        width: 250px;
+        height: 250px;
+    }
 `
 export const Profile = styled.div`
     display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: 767px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 export const Introduction = styled.div`
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     margin-left: 103px;
+    @media only screen and (max-width: 767px){
+        margin-left: 0;
+    }
     span {
         font-size: 42px;
         font-style: normal;
@@ -61,7 +79,7 @@ export const Button = styled.div`
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
-    padding: 3px 0;
+    padding: 5px 0;
     span {
         font-size: 14px;
         font-weight: normal;
@@ -70,6 +88,10 @@ export const Button = styled.div`
         line-height: normal;
         letter-spacing: -0.28px;
     }
+`
+export const Link = styled.a`
+    text-decoration: none;
+    color: #fffff;
 `
 
 export default function Presentation() {
@@ -81,7 +103,7 @@ export default function Presentation() {
                 <span>Sobre mim</span>
                 <span>Advogado de formação e apaixonado por tecnoloiga, decidi no final de 2019 dar um novo ruma para a minha vida. Fiz então o processo seletivo para a escola de programação Labenu, fui aprovado e em 6 meses, aprendi a programar do zero ao full-stack. Além disso, desenvolvi vários projetos, em diferentes linguagens e frameworks, conforme exposto no meu perfil do github. Agora busco uma oportunidade de me inserir no mercado de trabalho e com a mesma dedicação e intensidade que aprendi, trabalharei para desenvolver os projetos que me foram confiados.</span>
                 <span>|HTML &nbsp;|CSS &nbsp;|Javascript &nbsp;|React &nbsp;|Redux &nbsp;|NodeJS &nbsp;|Typescript &nbsp;|SQL &nbsp;|Testes &nbsp;|AWS</span>
-                <a href={cv} download><Button><span>CV em PDF</span></Button></a>
+                <Link href={cv} download><Button><span>CV em PDF</span></Button></Link>
                 </Introduction>
             </Profile>
         </Container>

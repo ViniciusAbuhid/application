@@ -15,18 +15,27 @@ export const PageWrapper = styled.div`
     align-items: center;
     width: 100vw;
     font-family: 'Montserrat', sans-serif;
+    border: 1px black solid;
+`
+const SpecialWrapper = styled.div`
+  width: 100%
 `
 
-function App() {
+function App(props) {
+  React.createRef()
   return (
     <PageWrapper>
-      <Cover/>
-      <Presentation/>
-      <Content/>
-      <Background/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
+      <Cover projectsInfo='#projects' contactInfo='#contact' />
+      <Presentation />
+      <Content />
+      <Background />
+      <SpecialWrapper id='projects'>
+        <Portfolio />
+      </SpecialWrapper>
+      <SpecialWrapper id='contact'>
+        <Contact />
+      </SpecialWrapper>
+      <Footer />
     </PageWrapper>
   );
 }

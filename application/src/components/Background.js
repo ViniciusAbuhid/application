@@ -6,6 +6,9 @@ export const Container = styled.div`
     width: 100%;
     height: 441px;
     background-color: #292929;
+    @media only screen and (max-width: 1040px ){
+        height: auto;
+    }
 `
 export const Education = styled.div`
     width: 128px;
@@ -17,17 +20,24 @@ export const Education = styled.div`
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.15px;
+    margin: 0 auto;
     text-align: center;
     color: #ffffff;
-    padding: 46px 577px 0 575px;
+    padding: 46px 0 29px 0;
 `
 export const MainWrapper = styled.div`
     display: flex;
-    padding: 29px 0 68px 0;
+    padding: 29px 2px 68px 2px;
     justify-content: center;
+    @media only screen and (max-width: 767px ){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
 `
 export const EducationCard = styled.div`
-    padding-left: 2px;
+    padding: 0 2px;
     display: flex;
     flex-direction: column;
     width: 327px;
@@ -35,6 +45,17 @@ export const EducationCard = styled.div`
     border-radius: 8px;
     background-color: #ffffff;
     margin-right: 6px;
+    @media only screen and (max-width: 1040px ){
+        width: 300px;
+        height: 320px;
+    }
+    @media only screen and (max-width: 767px ){
+        margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 480px ){
+        margin-bottom: 10px;
+        width: 250px;
+    }
     span {
             font-size: 21px;
             font-weight: bold;

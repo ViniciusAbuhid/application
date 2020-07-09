@@ -9,6 +9,9 @@ export const Container = styled.div`
     align-items: center;
     padding: 19px 49px 0 32px;
     box-sizing: border-box;
+    @media only screen and (max-width: 480px) {
+        justify-content: center;
+    }
     > p {
         width: 57px;
         height: 25px;
@@ -18,7 +21,12 @@ export const Container = styled.div`
         font-style: normal;
         line-height: normal;
         letter-spacing: -0.28px;
-        color: #ffffff
+        color: #ffffff;
+        &:first-of-type {
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
+        }
     }
 `
 export const Nav = styled.div`
@@ -43,14 +51,19 @@ export const Nav = styled.div`
             }
       }
 `
+export const Link = styled.a`
+    text-decoration: none;
+    color: #4eaccf;
+`
+
 export default function Header(props) {
     return (
         <Container>
             <p>Vinícius</p>
             <Nav>
                 <p>Quem sou</p>
-                <p>Projetos</p>
-                <p>Contato</p>
+                <p><Link href={props.projects}>Projetos</Link></p>
+                <p><Link href={props.contact}>Contato</Link></p>
             </Nav>
         </Container>
     )

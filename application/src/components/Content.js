@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import me from '../assets/me.jpg'
 
 export const Container = styled.div`
+    width: 100%;
     height: 418px;
     background-color: #4eaccf;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 1100px) {
+        height: auto;
+    }
 `
 export const Text = styled.div`
+    padding-top: 46px;
     font-size: 25px;
     font-weight: bold;
     font-stretch: normal;
@@ -18,18 +21,39 @@ export const Text = styled.div`
     letter-spacing: -0.15px;
     text-align: center;
     color: #ffffff;
-    padding: 46px 562px 0 564px;
+    white-space: nowrap;
 `
 export const MainWrapper = styled.div`
+    width:100%;
     display: flex;
-    padding: 42px 317px 80px 281px
+    padding: 42px 317px 80px 375px;
+    justify-content: center;
+    @media only screen and (max-width: 1100px) {
+        height: auto;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    > div {
+        &: first-of-type {
+            display: flex;
+            justify-content: center;
+            @media only screen and (max-width: 767px){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 `
 export const FrontEnd = styled.div`
     display: flex;
     flex-direction: column;
-    border: px black solid
-    border-sizing: border-box;
-    margin-right: 122px;
+    margin-right: 10%;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
     span {
         font-size: 55px;
         font-weight: bold;
@@ -37,7 +61,7 @@ export const FrontEnd = styled.div`
         font-style: normal;
         line-height: normal;
         letter-spacing: -0.32px;
-        color: #ffffff;;
+        color: #ffffff;
         &:first-of-type {
             white-space: nowrap;
             margin-bottom: 20px;
@@ -57,8 +81,6 @@ export const FrontEnd = styled.div`
 export const BackEnd = styled.div`
     display: flex;
     flex-direction: column;
-    border: px black solid
-    border-sizing: border-box;
     span {
         font-size: 55px;
         font-weight: bold;
@@ -89,6 +111,7 @@ export default function Content() {
         <Container>
             <Text>O que faço</Text>
             <MainWrapper>
+            <div>
                 <FrontEnd>
                     <span>Front-end</span>
                     <span>
@@ -104,9 +127,10 @@ export default function Content() {
                         Aplicações utilizando NodeJS, Typescript e MySQL.
                     </span>
                     <span>
-                        Criação de API´s para comunicação com front-end seguindo princípio de Clean Code.
+                        Criação de API's para comunicação com front-end seguindo princípio de Clean Code.
                     </span>
                 </BackEnd>
+            </div>
             </MainWrapper>
         </Container>
     )

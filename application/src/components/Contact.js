@@ -7,10 +7,14 @@ import wpp from '../assets/wpp.png'
 
 export const Container = styled.div`
     width: 100%;
-    height: 397px;
+    border: 1px black solid;
+    height: auto;
     background-color: #063447;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     div {
         font-size: 42px;
         font-weight: bold;
@@ -22,7 +26,7 @@ export const Container = styled.div`
         color: #ffffff;
         &:first-of-type {
             margin-bottom: 12px;
-            padding: 54px 495px 0 495px
+            padding: 54px 0 0 0
         }
         &:nth-of-type(2) {
             padding: 35px 378px 0 379px;
@@ -65,7 +69,7 @@ export default function Contact(props) {
                 <a href='https://www.instagram.com/abuhidvinicius/' target="_blank">
                     <img src={insta}/>
                 </a>
-                <a href='https://www.linkedin.com/in/vin%C3%ADcius-abuhid/' target="_blank">
+                <a href="tel:31984662430" target="_blank">
                     <img src={wpp}/>
                 </a>
             </div>

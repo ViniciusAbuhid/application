@@ -111,7 +111,7 @@ export default function Presentation() {
                 <PicContainer src={me}/>
                 <Introduction>
                 <span>Sobre mim</span>
-                <span>Advogado de formação e apaixonado por tecnoloiga, decidi no final de 2019 dar um novo ruma para a minha vida. Fiz então o processo seletivo para a escola de programação Labenu, fui aprovado e em 6 meses, aprendi a programar do zero ao full-stack. Além disso, desenvolvi vários projetos, em diferentes linguagens e frameworks, conforme exposto no meu perfil do github. Agora busco uma oportunidade de me inserir no mercado de trabalho e com a mesma dedicação e intensidade que aprendi, trabalharei para desenvolver os projetos que me foram confiados.</span>
+                <span>Advogado de formação e apaixonado por tecnologia, decidi no final de 2019 dar um novo rumo para a minha vida. Fiz então o processo seletivo para a escola de programação Labenu, fui aprovado e em 6 meses aprendi a programar do zero ao full-stack. Além disso, desenvolvi vários projetos, em diferentes linguagens e frameworks, conforme exposto no meu perfil do github. Agora busco uma oportunidade de me inserir no mercado de trabalho e com a mesma dedicação e intensidade que aprendi, trabalharei para desenvolver os projetos que me foram confiados.</span>
                 <span>|HTML &nbsp;|CSS &nbsp;|Javascript &nbsp;|React &nbsp;|Redux &nbsp;|NodeJS &nbsp;|Typescript &nbsp;|SQL &nbsp;|Testes &nbsp;|AWS</span>
                 <Link href={cv} download><Button><span>CV em PDF</span></Button></Link>
                 </Introduction>

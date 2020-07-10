@@ -168,7 +168,7 @@ export default function Portfolio(props) {
                 <TextWrapper direction='right'>
                     <span>LaBook</span>
                     <span>BackEnd</span>
-                    <span>Para este projeto, fomos desafiados a construir o sistema interno de uma rede social, o Facebook da Labenu. Deveríamos então, através do NodeJs, Javascript, mysql, dentre outras ferramentas, possibilitar que nosso backend realizasse todas as operações necessárias para garantir a execução de funcionalidades comuns em uma rede social: cadastro, login, fazer e desfazer amizade, ver feed, etc...</span>
+                    <span>Para este projeto, fomos desafiados a construir o sistema interno de uma rede social, o Facebook da Labenu. Deveríamos então, através do NodeJs, Typescript, mysql, dentre outras ferramentas, possibilitar que nosso backend realizasse todas as operações necessárias para garantir a execução de funcionalidades comuns em uma rede social: cadastro, login, fazer e desfazer amizade, ver feed, etc...</span>
                     <div>
                         <Link href='https://github.com/ViniciusAbuhid/Labook' target="_blank">
                             Ver no Github

@@ -86,7 +86,7 @@ export default function Background() {
                     <span>Graduação em Direito na Faculdade Milton Campos</span>
                     <span>Nova Lima/MG</span>
                     <span>2013-2018</span>
-                    <span>Considerada a melhor faculdade de Direito privada e constatada como a que mais aprova no exame da OAB em Minas Gerais, a Faculdade Milton Campos é referência na formação de grandes juristas e profissionais.</span>
+                    <span>Considerada a melhor faculdade de Direito privada de Minas Gerais detentora do maior número de aprovações no exame da OAB do estado, a Faculdade Milton Campos é referência na formação de grandes juristas e profissionais.</span>
                 </EducationCard>
                 <EducationCard>
                     <span>Curso de Web Full Stack na Labenu</span>

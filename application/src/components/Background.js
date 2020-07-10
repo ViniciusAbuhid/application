@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import me from '../assets/me.jpg'
 
 export const Container = styled.div`
     width: 100%;
-    height: 441px;
+    height: auto;
     background-color: #292929;
-    @media only screen and (max-width: 1040px ){
-        height: auto;
-    }
+    justify-content: center;
+    align-items: center;
 `
 export const Education = styled.div`
     width: 128px;
@@ -24,37 +22,34 @@ export const Education = styled.div`
     text-align: center;
     color: #ffffff;
     padding: 46px 0 29px 0;
+    @media only screen and (max-width: 480px ){
+        font-size: 31px;
+    }
 `
 export const MainWrapper = styled.div`
     display: flex;
-    padding: 29px 2px 68px 2px;
     justify-content: center;
+    padding: 29px 0 68px 0;
+    height: auto;
     @media only screen and (max-width: 767px ){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        justify-items: center;
     }
 `
 export const EducationCard = styled.div`
     padding: 0 2px;
     display: flex;
     flex-direction: column;
-    width: 327px;
-    height: 268px;
+    width: 30%;
+    height: 300px;
     border-radius: 8px;
     background-color: #ffffff;
     margin-right: 6px;
-    @media only screen and (max-width: 1040px ){
-        width: 300px;
-        height: 320px;
-    }
     @media only screen and (max-width: 767px ){
-        margin-bottom: 10px;
-    }
-    @media only screen and (max-width: 480px ){
-        margin-bottom: 10px;
-        width: 250px;
+        width: 70%;
+        height: auto;
     }
     span {
             font-size: 21px;
@@ -66,12 +61,18 @@ export const EducationCard = styled.div`
             color: #292929;
             &:first-of-type {
                 margin-bottom: 12px;
+                @media only screen and (max-width: 480px ){
+                    font-size: 27px;
+                }
             }
             &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
                     font-size: 12px;
                     font-weight: normal;
                     letter-spacing: -0.16px;
                     margin-bottom: 12px;
+                    @media only screen and (max-width: 480px ){
+                        font-size: 18px;
+                    }
             }
         }
 `
@@ -82,7 +83,7 @@ export default function Background() {
             <Education>Educação</Education>
             <MainWrapper>
                 <EducationCard>
-                    <span>Graduação em Direito na Faculdade de Direito Milton Campos</span>
+                    <span>Graduação em Direito na Faculdade Milton Campos</span>
                     <span>Nova Lima/MG</span>
                     <span>2013-2018</span>
                     <span>Considerada a melhor faculdade de Direito privada e constatada como a que mais aprova no exame da OAB em Minas Gerais, a Faculdade Milton Campos é referência na formação de grandes juristas e profissionais.</span>
@@ -91,7 +92,7 @@ export default function Background() {
                     <span>Curso de Web Full Stack na Labenu</span>
                     <span>Curso remoto</span>
                     <span>6 meses - 2020</span>
-                    <span>Escola de programação full-stack, focada em empregabilidade. São 6 meses full-time em que alunos sem nenhuma experiência em programação, são transformadas em desenvolvedores capazes de assumir qualquer desafio de início de carreira. São mais de 1000 horas de experiência, em tempo real e com professores experientes. Dentre as competências ensinadas destacam-se tecnologias como: React, Javascript, Node.js, dentre outras.</span>
+                    <span>Escola de programação full-stack, focada em empregabilidade. São 6 meses full-time e mais de 1000 horas de experiência, em tempo real e com professores experientes. Dentre as competências ensinadas destacam-se tecnologias como: React, Javascript, Node.js, dentre outras.</span>
                 </EducationCard>
                 <EducationCard>
                     <span>Aprendizado de idiomas</span>

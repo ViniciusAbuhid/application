@@ -3,17 +3,28 @@ import styled from 'styled-components'
 import me from '../assets/me.jpg'
 import cv from '../assets/cv.pdf'
 
-export const Container = styled.div`
+const Container = styled.div`
     width: 100%;
     height: auto;
     background-color: #063447;
     box-sizing: border-box;
-    padding: 69px 150px 64px 150px;
+    padding: 60px 0;
     @media only screen and (max-width: 984px){
-        padding: 69px 50px 64px 50px;
     }
 `
-export const PicContainer = styled.img`
+const Profile = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media only screen and (max-width: 767px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
+const PicContainer = styled.img`
     width: 250px;
     height: 305px;
     object-fit: cover;
@@ -25,22 +36,15 @@ export const PicContainer = styled.img`
         height: 250px;
     }
 `
-export const Profile = styled.div`
-    display: flex;
-    flex-direction: row;
-    @media only screen and (max-width: 767px){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-`
-export const Introduction = styled.div`
+const Introduction = styled.div`
+    width: 40%;
     display: flex;
     flex-direction: column;
-    margin-left: 103px;
+    margin-left: 11%;
     @media only screen and (max-width: 767px){
+        margin-top: 25px;
         margin-left: 0;
+        width: 70%;
     }
     span {
         font-size: 42px;
@@ -57,12 +61,19 @@ export const Introduction = styled.div`
             font-weight: normal;
             letter-spacing: -0.16px;
             margin-bottom: 26px;
+            @media only screen and (max-width: 480px ){
+                font-size: 18px;
+            }
         }
         &:nth-of-type(3) {
+            text-align: center;
             font-size: 14px;
             font-weight: normal;
             letter-spacing: -0.28px;
             margin-bottom: 26px;
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
         a {
                 background-color: red;
@@ -70,7 +81,7 @@ export const Introduction = styled.div`
             }
 }
 `
-export const Button = styled.div`
+const Button = styled.div`
     width: 140px;
     height: 30px;
     border-radius: 8px;
@@ -78,7 +89,6 @@ export const Button = styled.div`
     background-color: #4eaccf;
     margin: 0 auto;
     text-align: center;
-    box-sizing: border-box;
     padding: 5px 0;
     span {
         font-size: 14px;
@@ -89,7 +99,7 @@ export const Button = styled.div`
         letter-spacing: -0.28px;
     }
 `
-export const Link = styled.a`
+const Link = styled.a`
     text-decoration: none;
     color: #fffff;
 `

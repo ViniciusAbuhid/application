@@ -15,7 +15,6 @@ export const PageWrapper = styled.div`
     align-items: center;
     width: 100vw;
     font-family: 'Montserrat', sans-serif;
-    border: 1px black solid;
 `
 const SpecialWrapper = styled.div`
   width: 100%

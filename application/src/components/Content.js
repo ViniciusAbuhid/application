@@ -3,15 +3,15 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
-    height: 418px;
+    height: auto;
     background-color: #4eaccf;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    @media only screen and (max-width: 1100px) {
-        height: auto;
-    }
+    padding-bottom: 65px;
 `
 export const Text = styled.div`
+    width: 100%;
     padding-top: 46px;
     font-size: 25px;
     font-weight: bold;
@@ -24,35 +24,26 @@ export const Text = styled.div`
     white-space: nowrap;
 `
 export const MainWrapper = styled.div`
-    width:100%;
+    width:60%;
     display: flex;
-    padding: 42px 317px 80px 375px;
-    justify-content: center;
-    @media only screen and (max-width: 1100px) {
-        height: auto;
-        padding-left: 25%;
-        padding-right: 25%;
-    }
-    > div {
-        &: first-of-type {
-            display: flex;
-            justify-content: center;
-            @media only screen and (max-width: 767px){
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        }
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    @media only screen and (max-width: 767px){
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 `
 export const FrontEnd = styled.div`
+    width: 40%;
     display: flex;
     flex-direction: column;
-    margin-right: 10%;
     @media only screen and (max-width: 767px) {
         margin-bottom: 20px;
         margin-right: 0;
+        width: 80%
     }
     span {
         font-size: 55px;
@@ -63,7 +54,6 @@ export const FrontEnd = styled.div`
         letter-spacing: -0.32px;
         color: #ffffff;
         &:first-of-type {
-            white-space: nowrap;
             margin-bottom: 20px;
         }
         &:nth-of-type(2) {
@@ -71,16 +61,26 @@ export const FrontEnd = styled.div`
             font-weight: normal;
             letter-spacing: -0.22px;
             margin-bottom: 20px;
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
         &:nth-of-type(3) {
             font-size: 16px;
             font-weight: normal;
             letter-spacing: -0.22px;
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
 `
 export const BackEnd = styled.div`
+    width: 40%;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 767px) {
+        width: 80%
+    }
     span {
         font-size: 55px;
         font-weight: bold;
@@ -90,7 +90,6 @@ export const BackEnd = styled.div`
         letter-spacing: -0.32px;
         color: #ffffff;;
         &:first-of-type {
-            white-space: nowrap;
             margin-bottom: 20px;
         }
         &:nth-of-type(2) {
@@ -98,11 +97,17 @@ export const BackEnd = styled.div`
             font-weight: normal;
             letter-spacing: -0.22px;
             margin-bottom: 20px;
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
         &:nth-of-type(3) {
             font-size: 16px;
             font-weight: normal;
             letter-spacing: -0.22px;
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
 `
 
@@ -111,7 +116,6 @@ export default function Content() {
         <Container>
             <Text>O que faço</Text>
             <MainWrapper>
-            <div>
                 <FrontEnd>
                     <span>Front-end</span>
                     <span>
@@ -130,7 +134,6 @@ export default function Content() {
                         Criação de API's para comunicação com front-end seguindo princípio de Clean Code.
                     </span>
                 </BackEnd>
-            </div>
             </MainWrapper>
         </Container>
     )

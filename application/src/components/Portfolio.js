@@ -8,7 +8,8 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 `
 const Title = styled.div`
     max-width: 100%;
@@ -24,56 +25,54 @@ const Title = styled.div`
     color: #4eaccf;
     padding: 43px 0 42px 0;
     white-space: nowrap;
-`
-const MainWrapper = styled.div`
-    display: flex;
-    padding: 29px 0 68px 0;
-    justify-content: center;
+    @media only screen and (max-width: 480px ){
+        font-size: 31px;
+    }
 `
 const ProjectCard = styled.div`
-    padding: 42px 296px 0 235px;
+    width: 70%;
+    padding: 30px 0 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    max-width: 100%;
-    @media only screen and (max-width: 684px) {
+    @media only screen and (max-width: 767px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 42px 100px 0 100px;
-    }
-    @media only screen and (max-width: 480px) {
-        padding: 42px 70px 0 70px;
+        width: 100%;
     }
 `
 const ImgWrapper = styled.img`
-    width: 312px;
+    width: 45%;
     height: 216px;
-    margin-left: 69px;
-    margin-right: 69px;
     object-fit: contain;
-    &:nth-of-type(2), &:nth-of-type(5) {
-        display: none;
-        @media only screen and (max-width: 684px) {
+        @media only screen and (max-width: 767px) {
             display: inline;
+            width: 70%;
         }
     };
-`
-const ShowUpImg = styled(ImgWrapper)`
-    @media only screen and (max-width: 684px) {
-        display: none;
+    &:nth-of-type(2) {
+        @media only screen and (max-width: 767px){
+            display: none;
+        }
     }
 `
 const StyledImg = styled(ImgWrapper)`
-@media only screen and (max-width: 684px){
-    margin-top: 30px
-}
+    display: none;
+    @media only screen and (max-width: 767px){
+        display: inline
+    }
 `
 
 const TextWrapper = styled.div`
     display: flex;
+    width: 45%;
     flex-direction: column;
     justify-content: center;
+    @media only screen and (max-width: 767px){
+        width: 70%;
+        align-items: center;
+    }
     span {
         font-size: 42px;
         font-weight: bold;
@@ -86,13 +85,19 @@ const TextWrapper = styled.div`
             font-size: 21px;
             font-weight: normal;
             letter-spacing: -0.28px;
-            margin-bottom: 23px
+            margin-bottom: 23px;
+            @media only screen and (max-width: 480px ){
+                font-size: 27px;
+            }
         }
         &:nth-of-type(3) {
             font-size: 12px;
             font-weight: normal;
             letter-spacing: -0.28px;
-            margin-bottom: 23px
+            margin-bottom: 23px;
+            @media only screen and (max-width: 480px ){
+                font-size: 18px;
+            }
         }
     }
     div {
@@ -116,8 +121,8 @@ const TextWrapper = styled.div`
 const Bottom = styled.div`
     width: %;
     padding: 88px 0 71px 0;
-    @media only screen and (max-width: 684px) {
-        padding-top: 30px; 
+    @media only screen and (max-width: 767px) {
+        padding-top: 60x; 
     }
     > div {
         width: 150px;
@@ -133,7 +138,6 @@ const Bottom = styled.div`
         margin: 0 auto;
         text-align: center;
         color: #ffffff;
-        box-sizing: border-box;
         padding: 6px 0;
     }
 `
@@ -147,7 +151,7 @@ export default function Portfolio(props) {
         <Container>
             <Title>Meus projetos</Title>
             <ProjectCard>
-                <ShowUpImg src={futurex} direction='left' />
+                <ImgWrapper src={futurex} direction='left' />
                 <TextWrapper direction='left'>
                     <span>FutureX</span>
                     <span>Frontend</span>
@@ -158,9 +162,9 @@ export default function Portfolio(props) {
                             </Link>
                     </div>
                 </TextWrapper>
-                <ImgWrapper src={futurex} direction='left' />
             </ProjectCard>
             <ProjectCard>
+            <StyledImg src={macbook} direction='right' />
                 <TextWrapper direction='right'>
                     <span>LaBook</span>
                     <span>BackEnd</span>
@@ -171,10 +175,10 @@ export default function Portfolio(props) {
                             </Link>
                     </div>
                 </TextWrapper>
-                <StyledImg src={macbook} direction='right' />
+                <ImgWrapper src={macbook} direction='right' />
             </ProjectCard>
             <ProjectCard>
-                <ShowUpImg src={spotenu} direction='left' />
+                <ImgWrapper src={spotenu} direction='left' />
                 <TextWrapper direction='left'>
                     <span>Spotenu</span>
                     <span>Full-Stack</span>
@@ -185,7 +189,6 @@ export default function Portfolio(props) {
                             </Link>
                     </div>
                 </TextWrapper>
-                <ImgWrapper src={spotenu} direction='left' />
             </ProjectCard>
             <Bottom>
                 <div><Link href='https://github.com/ViniciusAbuhid?tab=repositories' target="_blank">mais projetos</Link></div>

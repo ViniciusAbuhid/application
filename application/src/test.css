@@ -1,9 +1,11 @@
 div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: right;
     align-items: center;
     justify-self: center;
     object-fit: contain;
-    text-align: center;
+    text-align: center; */
 }

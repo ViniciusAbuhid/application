@@ -8,13 +8,10 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 19px 49px 0 32px;
-    box-sizing: border-box;
     @media only screen and (max-width: 480px) {
         justify-content: center;
     }
     > p {
-        width: 57px;
-        height: 25px;
         font-size: 21px;
         font-weight: bold;
         font-stretch: normal;

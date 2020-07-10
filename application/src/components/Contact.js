@@ -7,7 +7,6 @@ import wpp from '../assets/wpp.png'
 
 export const Container = styled.div`
     width: 100%;
-    border: 1px black solid;
     height: auto;
     background-color: #063447;
     display: flex;
@@ -16,6 +15,8 @@ export const Container = styled.div`
     align-items: center;
 
     div {
+        max-width: 50%;
+        height: 150px;
         font-size: 42px;
         font-weight: bold;
         font-stretch: normal;
@@ -24,27 +25,35 @@ export const Container = styled.div`
         letter-spacing: -0.25px;
         text-align: center;
         color: #ffffff;
-        &:first-of-type {
-            margin-bottom: 12px;
-            padding: 54px 0 0 0
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (max-width: 480px){
+            height: 200px;
         }
         &:nth-of-type(2) {
-            padding: 35px 378px 0 379px;
             font-size: 18px;
             font-weight: normal;
             letter-spacing: -0.24px;
             text-align: center;
+            @media only screen and (max-width: 767px){
+                max-width: 80%
+            };
+            @media only screen and (max-width: 480px ){
+                font-size: 20px;
+            }
         }
         &:nth-of-type(3) {
-            padding: 51px 480px 56px 481px;
+            width: 20%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-around;
+            @media only screen and (max-width: 767px){
+                width: 40%
+            }
+            @media only screen and (max-width: 480px){
+                width: 60%
+            }
         }
-    }
-    a {
-        margin-right:15px;
-        margin-left: 15px;
     }
 `
 

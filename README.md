@@ -1,2 +1,2 @@
 # Application
-site created to apply for jobs
+created to apply for jobs
